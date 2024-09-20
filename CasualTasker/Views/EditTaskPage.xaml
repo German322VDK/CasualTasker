@@ -5,9 +5,97 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CasualTasker.Views"
              mc:Ignorable="d" 
+             xmlns:vr="clr-namespace:CasualTasker.Infrastructure.ValidationRules"
+             xmlns:fa="http://schemas.fontawesome.com/icons/"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              DataContext="{Binding EditTaskVM, Source={StaticResource Locator}}"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Margin="10" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0, 20" Orientation="Horizontal">
+            <TextBlock Text="Список " Margin="0,0,0,5"/>
+            <ComboBox ItemsSource="{Binding Tasks}" SelectedValue="{Binding SelectedTask}" SelectedIndex="0" DisplayMemberPath="Name"   
+              Width="350"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="0, 20">
+            <TextBlock Text="ID" Margin="0,0,25,0"/>
+            <TextBlock Width="350" Text="{Binding EditTask.Id}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" >
+            <TextBlock Text="Название" Margin="0,0,25,0"/>
+            <TextBox Width="350">
+                <TextBox.Text>
+                    <Binding Path="EditTask.Name" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <vr:NameValidationRule ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal"  Margin="0, 20">
+            <TextBlock Text="Описание" Margin="0,0,10,0"/>
+            <TextBox Text="{Binding EditTask.Description}" Width="350" Height="80" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal"  Margin="0, 20">
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Дата и время" Margin="0, 0, 0, 5"/>
+                <StackPanel Orientation="Horizontal"  Margin="10, 0">
+                    <materialDesign:TimePicker  SelectedTime="{Binding EditTask.DueDate, Mode=TwoWay}" Is24Hours="True" />
+                    <DatePicker SelectedDate="{Binding EditTask.DueDate, Mode=TwoWay}" Width="120"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Статус" Margin="0,0,0,5"/>
+                <ComboBox Width="100" 
+                          >
+                    <ComboBox.SelectedValue>
+                        <Binding Path="EditTask.Status" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <vr:EnumValidationRule ValidatesOnTargetUpdated="True"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </ComboBox.SelectedValue>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0, 20">
+            <TextBlock Text="Category" Margin="0,0,0,5"/>
+            <ComboBox ItemsSource="{Binding Categories}" MinWidth="150" MaxWidth="250">
+                <ComboBox.SelectedValue>
+                    <Binding Path="SelectedCategory" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <vr:NotNullValidationRule ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </ComboBox.SelectedValue>
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0, 20" HorizontalAlignment="Center">
+            <Button fa:Awesome.Content="Regular_PlusSquare"  Command="{Binding AddTaskCommand}" Width="80" Margin="5"/>
+            <Button fa:Awesome.Content="Solid_Edit"  Command="{Binding UpdateTaskCommand}" Width="80" Margin="5"/>
+            <Button fa:Awesome.Content="Solid_Trash"  Command="{Binding DeleteTaskCommand}" Width="80" Margin="5"/>
+        </StackPanel>
     </Grid>
 </UserControl>
