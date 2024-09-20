@@ -4,10 +4,77 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CasualTasker.Views"
+             xmlns:fa="http://schemas.fontawesome.com/icons/"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              DataContext="{Binding MainPageVM, Source={StaticResource Locator}}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- Боковая панель -->
+            <ColumnDefinition Width="*"/>
+            <!-- Основная область -->
+        </Grid.ColumnDefinitions>
+
+        <StackPanel  Grid.Column="0" Background="#EEE" MinHeight="100" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Категории" HorizontalAlignment="Center"  FontWeight="Bold" FontSize="16" Margin="10,10" />
+                <ToggleButton IsChecked="{Binding IsUsedCategoryFilter}" ToolTip="Использовать фильтр по категориям?"/>
+            </StackPanel>
+            <ScrollViewer>
+                <ListBox x:Name="CategoryListBox" MinHeight="200" MaxHeight="350"
+                    SelectedItem="{Binding SelectedCategory}" ItemsSource="{Binding Categories}" SelectedIndex="0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Background="{Binding ColorCode}">
+                                <TextBlock Text="{Binding Name}" Margin="5"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <ToolBar>
+                <Button fa:Awesome.Content="Solid_TrashAlt" Command="{Binding DeleteTaskCommand}" Margin="5"/>
+                <Button fa:Awesome.Content="Solid_SyncAlt" Margin="5" ToolTip="Обновить из бд"
+                    Command="{Binding DownloadDataCommand}" />
+                <Label fa:Awesome.Content="Solid_Search" Height="20"/>
+
+                <TextBox MinWidth="200" SpellCheck.IsEnabled="True" Language="ru-ru"
+                    VerticalAlignment="Center" materialDesign:HintAssist.Hint="Название"
+                    Text="{Binding SearchPhrase, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <DatePicker materialDesign:HintAssist.Hint="Выбранная дата"  MinWidth="100"  IsDropDownOpen="False" 
+                    SelectedDateFormat="Short"  Margin="5 5 5 5" MinHeight="35" Language="ru"
+                    SelectedDate="{Binding SelectedDate}"/>
+                <ToggleButton IsChecked="{Binding IsUsedDateFilter}" ToolTip="Использовать фильтр по дате?"/>
+
+                <ComboBox Width="100" SelectedValue="{Binding SearchStatus}"  />
+                <ToggleButton IsChecked="{Binding IsUsedStatusFilter}" ToolTip="Использовать фильтр по дате?"/>
+            </ToolBar>
+
+            <DataGrid Grid.Row="1" ItemsSource="{Binding SearchTasks}" SelectedItem="{Binding SelectedTask}" SelectedIndex="0"
+            MinHeight="250" MaxHeight="500"
+            AutoGenerateColumns="False" GridLinesVisibility="Vertical" IsReadOnly="True">
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="ID" MinWidth="30" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Название" MinWidth="100" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Категория" MinWidth="100" Binding="{Binding Category.Name}">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Описание" MinWidth="160" Width="*" Binding="{Binding Description}"/>
+                    <DataGridTextColumn Header="Срок выполнения" MinWidth="140" Binding="{Binding DueDate, StringFormat=dd/MM/yyyy | hh:mm:ss}"/>
+                    <DataGridTextColumn Header="Статус" MinWidth="160" Binding="{Binding Status}"/>
+                </DataGrid.Columns>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="{Binding Category.Color}" />
+                    </Style>
+                </DataGrid.RowStyle>
+            </DataGrid>
+        </StackPanel>
+
     </Grid>
 </UserControl>
