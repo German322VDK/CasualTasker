@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:CasualTasker.Views"
              xmlns:fa="http://schemas.fontawesome.com/icons/"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:ex="clr-namespace:CasualTasker.Infrastructure.WPFExtension"
+             xmlns:m="clr-namespace:CasualTasker.DTO;assembly=CasualTasker.DTO"
              mc:Ignorable="d" 
              DataContext="{Binding MainPageVM, Source={StaticResource Locator}}"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -52,8 +54,9 @@
                     SelectedDate="{Binding SelectedDate}"/>
                 <ToggleButton IsChecked="{Binding IsUsedDateFilter}" ToolTip="Использовать фильтр по дате?"/>
 
-                <ComboBox Width="100" SelectedValue="{Binding SearchStatus}"  />
-                <ToggleButton IsChecked="{Binding IsUsedStatusFilter}" ToolTip="Использовать фильтр по дате?"/>
+                <ComboBox Width="100" SelectedValue="{Binding SearchStatus}"  
+                          ItemsSource="{Binding Source={ex:EnumCollection {x:Type m:CasualTaskStatus}}}"/>
+                <ToggleButton IsChecked="{Binding IsUsedStatusFilter}" ToolTip="Использовать фильтр по статусу?"/>
             </ToolBar>
 
             <DataGrid Grid.Row="1" ItemsSource="{Binding SearchTasks}" SelectedItem="{Binding SelectedTask}" SelectedIndex="0"
