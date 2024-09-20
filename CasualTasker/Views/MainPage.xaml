@@ -59,7 +59,7 @@
                 <ToggleButton IsChecked="{Binding IsUsedStatusFilter}" ToolTip="Использовать фильтр по статусу?"/>
             </ToolBar>
 
-            <DataGrid Grid.Row="1" ItemsSource="{Binding SearchTasks}" SelectedItem="{Binding SelectedTask}" SelectedIndex="0"
+            <DataGrid Grid.Row="1" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask}" SelectedIndex="0"
             MinHeight="250" MaxHeight="500"
             AutoGenerateColumns="False" GridLinesVisibility="Vertical" IsReadOnly="True">
                 <DataGrid.Columns >
