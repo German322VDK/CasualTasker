@@ -29,7 +29,7 @@
                     SelectedItem="{Binding SelectedCategory}" ItemsSource="{Binding Categories}" SelectedIndex="0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Background="{Binding ColorCode}">
+                            <StackPanel Orientation="Horizontal" Background="{Binding Color}">
                                 <TextBlock Text="{Binding Name}" Margin="5"/>
                             </StackPanel>
                         </DataTemplate>
