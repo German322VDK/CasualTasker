@@ -6,8 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
-using System.Configuration;
-using System.Data;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -54,7 +53,7 @@ namespace CasualTasker
             DispatcherUnhandledException += OnDispatcherUnhandledException;
             AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
 
-            
+            SetCultureInfo("ru-RU");
         }
 
         private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
@@ -71,6 +70,15 @@ namespace CasualTasker
                 var exceptionHandler = Services.GetRequiredService<IExceptionHandlingService>();
                 exceptionHandler.HandleException(ex);
             }
+        }
+
+        private void SetCultureInfo(string name)
+        {
+            var culture = new CultureInfo(name);
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+            CultureInfo.CurrentCulture = culture;
+            CultureInfo.CurrentUICulture = culture;
         }
 
         private static Serilog.ILogger CreateSerilogLogger(IConfiguration configuration)
