@@ -11,7 +11,7 @@ namespace CasualTasker.ViewModels
     {
         private readonly ILogger<MainPageViewModel> _logger;
 
-        private readonly DataRepository _dataRepository;
+        private readonly DataRepository _repository;
         private readonly IObservableDbCollection<CategoryDTO> _categoriesData;
         private readonly IObservableDbCollection<TaskDTO> _tasksData;
 
@@ -31,10 +31,10 @@ namespace CasualTasker.ViewModels
 
         public MainPageViewModel(DataRepository dataRepository, ILogger<MainPageViewModel> logger)
         {
-            _dataRepository = dataRepository;
+            _repository = dataRepository;
             _logger = logger;
-            _categoriesData = _dataRepository.Categories;
-            _tasksData = _dataRepository.Tasks;
+            _categoriesData = _repository.Categories;
+            _tasksData = _repository.Tasks;
 
             Tasks = _tasksData.ViewEntities;
             Categories = _categoriesData.ViewEntities;
@@ -137,7 +137,7 @@ namespace CasualTasker.ViewModels
         {
             _logger.LogInformation($"Выполнение операции {nameof(OnDownloadDataCommandExecuted)} в классе {nameof(MainWindowViewModel)}");
 
-            _dataRepository.UpdateDataFromDB();
+            _repository.UpdateDataFromDB();
         }
 
         private bool TasksFilter(object el)
