@@ -48,7 +48,7 @@
 
         <StackPanel Grid.Row="3" Width="800"  Margin="0,20">
             <TextBlock Text="Описание" Margin="0,0,0,5"/>
-            <materialDesign:ColorPicker Color="{Binding EditCategory.ColorCode, Mode=TwoWay, Converter={StaticResource ColorToHexConverter}}"/>
+            <materialDesign:ColorPicker Color="{Binding EditCategory.Color, Mode=TwoWay, Converter={StaticResource ColorToHexConverter}}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">

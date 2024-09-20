@@ -1,12 +1,12 @@
 ﻿using CasualTasker.Infrastructure.Middleware;
+using CasualTasker.Infrastructure.ObservableDbCollections;
 using CasualTasker.ViewModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
-using System.Configuration;
-using System.Data;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -37,6 +37,8 @@ namespace CasualTasker
 
         private static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
         {
+            services.AddSingleton<DataRepository>();
+
             services.AddSingleton<MainWindowViewModel>();
             services.AddSingleton<MainPageViewModel>();
             services.AddSingleton<EditCategoryPageViewModel>();
@@ -51,7 +53,7 @@ namespace CasualTasker
             DispatcherUnhandledException += OnDispatcherUnhandledException;
             AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
 
-            
+            SetCultureInfo("ru-RU");
         }
 
         private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
@@ -68,6 +70,15 @@ namespace CasualTasker
                 var exceptionHandler = Services.GetRequiredService<IExceptionHandlingService>();
                 exceptionHandler.HandleException(ex);
             }
+        }
+
+        private void SetCultureInfo(string name)
+        {
+            var culture = new CultureInfo(name);
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+            CultureInfo.CurrentCulture = culture;
+            CultureInfo.CurrentUICulture = culture;
         }
 
         private static Serilog.ILogger CreateSerilogLogger(IConfiguration configuration)

@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:CasualTasker.Views"
              xmlns:fa="http://schemas.fontawesome.com/icons/"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:ex="clr-namespace:CasualTasker.Infrastructure.WPFExtension"
+             xmlns:m="clr-namespace:CasualTasker.DTO;assembly=CasualTasker.DTO"
              mc:Ignorable="d" 
              DataContext="{Binding MainPageVM, Source={StaticResource Locator}}"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -27,7 +29,7 @@
                     SelectedItem="{Binding SelectedCategory}" ItemsSource="{Binding Categories}" SelectedIndex="0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Background="{Binding ColorCode}">
+                            <StackPanel Orientation="Horizontal" Background="{Binding Color}">
                                 <TextBlock Text="{Binding Name}" Margin="5"/>
                             </StackPanel>
                         </DataTemplate>
@@ -52,11 +54,12 @@
                     SelectedDate="{Binding SelectedDate}"/>
                 <ToggleButton IsChecked="{Binding IsUsedDateFilter}" ToolTip="Использовать фильтр по дате?"/>
 
-                <ComboBox Width="100" SelectedValue="{Binding SearchStatus}"  />
-                <ToggleButton IsChecked="{Binding IsUsedStatusFilter}" ToolTip="Использовать фильтр по дате?"/>
+                <ComboBox Width="100" SelectedValue="{Binding SearchStatus}"  
+                          ItemsSource="{Binding Source={ex:EnumCollection {x:Type m:CasualTaskStatus}}}"/>
+                <ToggleButton IsChecked="{Binding IsUsedStatusFilter}" ToolTip="Использовать фильтр по статусу?"/>
             </ToolBar>
 
-            <DataGrid Grid.Row="1" ItemsSource="{Binding SearchTasks}" SelectedItem="{Binding SelectedTask}" SelectedIndex="0"
+            <DataGrid Grid.Row="1" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask}" SelectedIndex="0"
             MinHeight="250" MaxHeight="500"
             AutoGenerateColumns="False" GridLinesVisibility="Vertical" IsReadOnly="True">
                 <DataGrid.Columns >
@@ -65,7 +68,7 @@
                     <DataGridTextColumn Header="Категория" MinWidth="100" Binding="{Binding Category.Name}">
                     </DataGridTextColumn>
                     <DataGridTextColumn Header="Описание" MinWidth="160" Width="*" Binding="{Binding Description}"/>
-                    <DataGridTextColumn Header="Срок выполнения" MinWidth="140" Binding="{Binding DueDate, StringFormat=dd/MM/yyyy | hh:mm:ss}"/>
+                    <DataGridTextColumn Header="Срок выполнения" MinWidth="140" Binding="{Binding DueDate, StringFormat=dd/MM/yyyy | HH:mm:ss}"/>
                     <DataGridTextColumn Header="Статус" MinWidth="160" Binding="{Binding Status}"/>
                 </DataGrid.Columns>
                 <DataGrid.RowStyle>
