@@ -1,4 +1,5 @@
 ﻿using CasualTasker.Infrastructure.Middleware;
+using CasualTasker.Infrastructure.ObservableDbCollections;
 using CasualTasker.ViewModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,6 +38,8 @@ namespace CasualTasker
 
         private static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
         {
+            services.AddSingleton<DataRepository>();
+
             services.AddSingleton<MainWindowViewModel>();
             services.AddSingleton<MainPageViewModel>();
             services.AddSingleton<EditCategoryPageViewModel>();
