@@ -1,4 +1,6 @@
 ﻿using CasualTasker.DTO;
+using CasualTasker.Services.Fallbacks;
+using CasualTasker.Services.Stores;
 using Microsoft.Extensions.Logging;
 
 namespace CasualTasker.Infrastructure.ObservableDbCollections
@@ -9,15 +11,18 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
         private readonly ILogger<DataRepository> _logger;
 
         public DataRepository(
+            IStore<CategoryDTO> categoryStore,
+            IStore<TaskDTO> taskStore,
+            ICategoryFallbackService categoryFallbackService,
             ILogger<DataRepository> logger,
             ILogger<ObservableDbCollection<CategoryDTO>> categoriesLogger,
             ILogger<ObservableDbCollection<TaskDTO>> tasksLogger)
         {
             _logger = logger;
 
-            var categories = new ObservableCategoryDbCollection(categoriesLogger);
+            var categories = new ObservableCategoryDbCollection(categoryStore, categoriesLogger, categoryFallbackService);
             Categories = categories;
-            Tasks = new ObservableTaskDbCollection(tasksLogger);
+            Tasks = new ObservableTaskDbCollection(taskStore, tasksLogger);
 
             _categoryTaskSynchronizer = new CategoryTaskSynchronizer(Tasks, categories);
             _categoryTaskSynchronizer.Synchronize();
