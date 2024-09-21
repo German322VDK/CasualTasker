@@ -1,6 +1,8 @@
-﻿using CasualTasker.Infrastructure.Middleware;
+﻿using CasualTasker.Database.Context;
+using CasualTasker.Infrastructure.Middleware;
 using CasualTasker.Infrastructure.ObservableDbCollections;
 using CasualTasker.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -37,6 +39,9 @@ namespace CasualTasker
 
         private static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
         {
+            services.AddDbContext<CasualTaskerDbContext>(opt =>
+                opt.UseSqlite(host.Configuration.GetConnectionString("Sqlite"))
+            );
             services.AddSingleton<DataRepository>();
 
             services.AddSingleton<MainWindowViewModel>();
