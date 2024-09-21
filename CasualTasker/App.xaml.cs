@@ -1,6 +1,9 @@
-﻿using CasualTasker.Infrastructure.Middleware;
+﻿using CasualTasker.Database.Context;
+using CasualTasker.Infrastructure.DbInitializers;
+using CasualTasker.Infrastructure.Middleware;
 using CasualTasker.Infrastructure.ObservableDbCollections;
 using CasualTasker.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -37,6 +40,9 @@ namespace CasualTasker
 
         private static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
         {
+            services.AddDbContext<CasualTaskerDbContext>(opt =>
+                opt.UseSqlite(host.Configuration.GetConnectionString("Sqlite"))
+            );
             services.AddSingleton<DataRepository>();
 
             services.AddSingleton<MainWindowViewModel>();
@@ -45,6 +51,8 @@ namespace CasualTasker
             services.AddSingleton<EditTaskPageViewModel>();
 
             services.AddSingleton<IExceptionHandlingService, ExceptionHandlingService>();
+
+            services.AddTransient<CasualTaskerDbInitializer>();
         }
 
 
@@ -54,6 +62,7 @@ namespace CasualTasker
             AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
 
             SetCultureInfo("ru-RU");
+            await Services.GetRequiredService<CasualTaskerDbInitializer>().InitializeAsync();
         }
 
         private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
