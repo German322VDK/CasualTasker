@@ -1,4 +1,5 @@
 ﻿using CasualTasker.Database.Context;
+using CasualTasker.Infrastructure.DbInitializers;
 using CasualTasker.Infrastructure.Middleware;
 using CasualTasker.Infrastructure.ObservableDbCollections;
 using CasualTasker.ViewModels;
@@ -50,6 +51,8 @@ namespace CasualTasker
             services.AddSingleton<EditTaskPageViewModel>();
 
             services.AddSingleton<IExceptionHandlingService, ExceptionHandlingService>();
+
+            services.AddTransient<CasualTaskerDbInitializer>();
         }
 
 
@@ -59,6 +62,7 @@ namespace CasualTasker
             AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
 
             SetCultureInfo("ru-RU");
+            await Services.GetRequiredService<CasualTaskerDbInitializer>().InitializeAsync();
         }
 
         private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
