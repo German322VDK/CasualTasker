@@ -1,7 +1,10 @@
 ﻿using CasualTasker.Database.Context;
+using CasualTasker.DTO;
 using CasualTasker.Infrastructure.DbInitializers;
 using CasualTasker.Infrastructure.Middleware;
 using CasualTasker.Infrastructure.ObservableDbCollections;
+using CasualTasker.Services.Fallbacks;
+using CasualTasker.Services.Stores;
 using CasualTasker.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -43,6 +46,12 @@ namespace CasualTasker
             services.AddDbContext<CasualTaskerDbContext>(opt =>
                 opt.UseSqlite(host.Configuration.GetConnectionString("Sqlite"))
             );
+
+            services.AddTransient<IStore<TaskDTO>, TaskStore>();
+            services.AddTransient<IStore<CategoryDTO>, CategoryStore>();
+            services.AddTransient<ICategoryFallbackService, CategoryFallbackService>();
+            services.AddTransient<CasualTaskerDbInitializer>();
+
             services.AddSingleton<DataRepository>();
 
             services.AddSingleton<MainWindowViewModel>();
@@ -51,8 +60,6 @@ namespace CasualTasker
             services.AddSingleton<EditTaskPageViewModel>();
 
             services.AddSingleton<IExceptionHandlingService, ExceptionHandlingService>();
-
-            services.AddTransient<CasualTaskerDbInitializer>();
         }
 
 
