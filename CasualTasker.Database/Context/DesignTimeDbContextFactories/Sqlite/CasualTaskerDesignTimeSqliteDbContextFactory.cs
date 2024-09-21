@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace CasualTasker.Database.Context.DesignTimeDbContextFactories.Sqlite
 {
-    public class CasualTaskerDesignTimeDbContextFactory : IDesignTimeDbContextFactory<CasualTaskerDbContext>
+    public class CasualTaskerDesignTimeSqliteDbContextFactory : IDesignTimeDbContextFactory<CasualTaskerDbContext>
     {
         public CasualTaskerDbContext CreateDbContext(string[] args)
         {
