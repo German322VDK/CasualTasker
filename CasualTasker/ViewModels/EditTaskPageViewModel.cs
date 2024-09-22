@@ -7,6 +7,9 @@ using System.ComponentModel;
 
 namespace CasualTasker.ViewModels
 {
+    /// <summary>
+    /// ViewModel for editing tasks in the application.
+    /// </summary>
     public class EditTaskPageViewModel : ViewModelBase
     {
         private readonly ILogger<EditTaskPageViewModel> _logger;
@@ -23,6 +26,11 @@ namespace CasualTasker.ViewModels
         private LambdaCommand? _updateTaskCommand;
         private LambdaCommand? _deleteTaskCommand;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditTaskPageViewModel"/> class.
+        /// </summary>
+        /// <param name="repository">The data repository for accessing tasks and categories.</param>
+        /// <param name="logger">Logger for logging operations.</param>
         public EditTaskPageViewModel(DataRepository repository, ILogger<EditTaskPageViewModel> logger)
         {
             _logger = logger;
@@ -33,10 +41,18 @@ namespace CasualTasker.ViewModels
             Categories = _categoriesData.ViewEntities;
         }
 
-
+        /// <summary>
+        /// Gets the collection of tasks for display in the UI.
+        /// </summary>
         public ICollectionView Tasks { get; set; }
+        /// <summary>
+        /// Gets the collection of categories for display in the UI.
+        /// </summary>
         public ICollectionView Categories { get; set; }
 
+        /// <summary>
+        /// Gets or sets the currently selected category for the task.
+        /// </summary>
         public CategoryDTO SelectedCategory
         {
             get => _selectedCategory;
@@ -54,6 +70,9 @@ namespace CasualTasker.ViewModels
                     SelectedTask.Category = _selectedCategory;
             }
         }
+        /// <summary>
+        /// Gets or sets the currently selected task for editing.
+        /// </summary>
         public TaskDTO SelectedTask
         {
             get => _selectedTask;
@@ -71,16 +90,28 @@ namespace CasualTasker.ViewModels
                     SelectedCategory = category;
             }
         }
+        /// <summary>
+        /// Gets or sets the task being edited.
+        /// </summary>
         public TaskDTO EditTask
         {
             get => _editTask;
             set => Set(ref _editTask, value);
         }
 
+        /// <summary>
+        /// Gets the command for adding a new task.
+        /// </summary>
         public LambdaCommand AddTaskCommand => _addTaskCommand ??=
             new LambdaCommand(OnAddTaskCommandExecuted, CanAddTaskCommandExecute);
+        /// <summary>
+        /// Gets the command for updating the selected task.
+        /// </summary>
         public LambdaCommand UpdateTaskCommand => _updateTaskCommand ??=
             new LambdaCommand(OnUpdateTaskCommandExecuted, CanUpdateTaskCommandExecute);
+        /// <summary>
+        /// Gets the command for deleting the selected task.
+        /// </summary>
         public LambdaCommand DeleteTaskCommand => _deleteTaskCommand ??=
             new LambdaCommand(OnDeleteTaskCommandExecuted, CanDeleteTaskCommandExecute);
 
