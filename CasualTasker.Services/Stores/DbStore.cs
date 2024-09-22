@@ -6,12 +6,21 @@ using Microsoft.Extensions.Logging;
 
 namespace CasualTasker.Services.Stores
 {
+    /// <summary>
+    /// Abstract base class for a database storage implementation for entities of type <typeparamref name="TEntity"/>.
+    /// </summary>
+    /// <typeparam name="TEntity">The type of the entity, which must be derived from <see cref="NamedEntity"/>.</typeparam>
     public abstract class DbStore<TEntity> : IStore<TEntity> where TEntity : NamedEntity
     {
         private readonly ILogger<DbStore<TEntity>> _logger;
         private readonly DbSet<TEntity> _set;
         private readonly CasualTaskerDbContext _dbContext;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DbStore{TEntity}"/> class.
+        /// </summary>
+        /// <param name="dbContext">The database context to be used.</param>
+        /// <param name="logger">The logger for logging operations.</param>
         protected DbStore(CasualTaskerDbContext dbContext, ILogger<DbStore<TEntity>> logger)
         {
             _logger = logger;
@@ -19,6 +28,11 @@ namespace CasualTasker.Services.Stores
             _set = _dbContext.Set<TEntity>();
         }
 
+        /// <summary>
+        /// Asynchronously adds a new entity to the store.
+        /// </summary>
+        /// <param name="item">The entity to add.</param>
+        /// <returns>The added entity.</returns>
         public virtual TEntity Add(TEntity item)
         {
             _logger.LogInformation($"Начало работы метода {nameof(Add)} класса {nameof(DbStore<TEntity>)}");
@@ -53,6 +67,11 @@ namespace CasualTasker.Services.Stores
             return GetById(result.Entity.Id);
         }
 
+        /// <summary>
+        /// Adds a new entity to the store.
+        /// </summary>
+        /// <param name="item">The entity to add.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains the added entity.</returns>
         public virtual async Task<TEntity> AddAsync(TEntity item)
         {
             _logger.LogInformation($"Начало работы метода {nameof(AddAsync)} класса {nameof(DbStore<TEntity>)}");
@@ -87,6 +106,11 @@ namespace CasualTasker.Services.Stores
             return GetById(result.Entity.Id);
         }
 
+        /// <summary>
+        /// Deletes an entity from the store by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the entity to delete.</param>
+        /// <returns><c>true</c> if the entity was successfully deleted; otherwise, <c>false</c>.</returns>
         public virtual bool Delete(int id)
         {
             _logger.LogInformation($"Начало работы метода {nameof(Delete)} класса {nameof(DbStore<TEntity>)}");
@@ -117,6 +141,11 @@ namespace CasualTasker.Services.Stores
             return true;
         }
 
+        /// <summary>
+        /// Asynchronously deletes an entity from the store by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the entity to delete.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains <c>true</c> if the entity was successfully deleted; otherwise, <c>false</c>.</returns>
         public virtual async Task<bool> DeleteAsync(int id)
         {
             _logger.LogInformation($"Начало работы метода {nameof(DeleteAsync)} класса {nameof(DbStore<TEntity>)}");
@@ -147,12 +176,26 @@ namespace CasualTasker.Services.Stores
             return true;
         }
 
+        /// <summary>
+        /// Retrieves all entities from the store as a queryable collection.
+        /// </summary>
+        /// <returns>An <see cref="IQueryable{TEntity}"/> of entities.</returns>
         public virtual IQueryable<TEntity> GetAll() =>
             _set.AsNoTracking();
 
+        /// <summary>
+        /// Retrieves an entity by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the entity.</param>
+        /// <returns>The entity with the specified identifier.</returns>
         public virtual TEntity GetById(int id) =>
             GetAll().FirstOrDefault(el => el.Id == id);
 
+        /// <summary>
+        /// Updates an existing entity in the store.
+        /// </summary>
+        /// <param name="item">The entity to update.</param>
+        /// <returns>The updated entity.</returns>
         public virtual TEntity Update(TEntity item)
         {
             _logger.LogInformation($"Начало работы метода {nameof(Update)} класса {nameof(DbStore<TEntity>)}");
@@ -188,6 +231,11 @@ namespace CasualTasker.Services.Stores
             return GetById(item.Id);
         }
 
+        /// <summary>
+        /// Asynchronously updates an existing entity in the store.
+        /// </summary>
+        /// <param name="item">The entity to update.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains the updated entity.</returns>
         public virtual async Task<TEntity> UpdateAsync(TEntity item)
         {
             _logger.LogInformation($"Начало работы метода {nameof(UpdateAsync)} класса {nameof(DbStore<TEntity>)}");
@@ -222,6 +270,13 @@ namespace CasualTasker.Services.Stores
             return GetById(item.Id);
         }
 
+        /// <summary>
+        /// Checks if an entity exists in the store by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the entity.</param>
+        /// <param name="methodName">The name of the method calling this method.</param>
+        /// <param name="className">The name of the class calling this method.</param>
+        /// <returns>The existing entity if found; otherwise, <c>null</c>.</returns>
         protected TEntity CheckEntityExist(int id, string methodName, string className)
         {
             TEntity? existingItem = GetById(id);
@@ -232,6 +287,12 @@ namespace CasualTasker.Services.Stores
             return existingItem;
         }
 
+        /// <summary>
+        /// Validates the entity and throws an exception if it is invalid.
+        /// </summary>
+        /// <param name="item">The entity to validate.</param>
+        /// <param name="methodName">The name of the method calling this method.</param>
+        /// <param name="className">The name of the class calling this method.</param>
         protected void ValidationEntityWithException(TEntity item, string methodName, string className)
         {
             if (item == null || (item is NamedEntity namedEntity && string.IsNullOrWhiteSpace(namedEntity.Name)))
@@ -241,6 +302,9 @@ namespace CasualTasker.Services.Stores
             }
         }
 
+        /// <summary>
+        /// Clears the change tracker to prevent memory issues.
+        /// </summary>
         protected void ClearTracker() =>
             _dbContext.ChangeTracker.Clear();
     }
