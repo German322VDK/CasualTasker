@@ -7,11 +7,27 @@ using System.ComponentModel;
 
 namespace CasualTasker.Infrastructure.ObservableDbCollections
 {
+    /// <summary>
+    /// Represents an observable collection that interacts with both the database and the view layer.
+    /// Provides methods for adding, deleting, updating, and retrieving entities, while keeping
+    /// the UI in sync using a <see cref="IViewUpdater{TEntity}"/>.
+    /// </summary>
+    /// <typeparam name="TEntity">The type of entity, which must inherit from <see cref="NamedEntity"/>.</typeparam>
     public class ObservableDbCollection<TEntity> : IObservableDbCollection<TEntity> where TEntity : NamedEntity
     {
-        protected readonly ILogger<ObservableDbCollection<TEntity>> _logger;
         private IViewUpdater<TEntity> _viewUpdater;
         private readonly IStore<TEntity> _store;
+
+        /// <summary>
+        /// The logger used for logging information, warnings, and errors related to the <see cref="ObservableDbCollection{TEntity}"/>.
+        /// </summary>
+        protected readonly ILogger<ObservableDbCollection<TEntity>> _logger;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ObservableDbCollection{TEntity}"/> class.
+        /// </summary>
+        /// <param name="store">The store that manages the database operations for the entity.</param>
+        /// <param name="logger">The logger to log operations within this class.</param>
         public ObservableDbCollection(IStore<TEntity> store, ILogger<ObservableDbCollection<TEntity>> logger)
         {
             _logger = logger;
@@ -19,15 +35,20 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
             _viewUpdater = new ViewUpdater<TEntity>(new ObservableCollection<TEntity>(_store.GetAll()));
         }
 
+        /// <inheritdoc />
         public ICollectionView ViewEntities =>
             _viewUpdater.ViewEntities;
+
+        /// <inheritdoc />
         public IEnumerable<TEntity> Entities => _viewUpdater.Entities;
 
+        /// <inheritdoc />
         public TEntity First => _viewUpdater.First;
 
+        /// <inheritdoc />
         public virtual TEntity DefaultDeletedEntity => null;
 
-
+        /// <inheritdoc />
         public virtual bool Add(TEntity namedEntity)
         {
             _logger.LogInformation($"Выполнение операции {nameof(Add)} в классе {nameof(ObservableDbCollection<TEntity>)}");
@@ -54,6 +75,7 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
             return true;
         }
 
+        /// <inheritdoc />
         public virtual bool Delete(TEntity namedEntity)
         {
             _logger.LogInformation($"Выполнение операции {nameof(Delete)} в классе {nameof(ObservableDbCollection<TEntity>)}");
@@ -81,14 +103,19 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
             return true;
         }
 
+        /// <inheritdoc />
         public bool EntityExists(TEntity entity) =>
             _store.GetById(entity.Id) != null;
 
+        /// <inheritdoc />
         public TEntity Get(int id) =>
             _viewUpdater.Get(id);
+
+        /// <inheritdoc />
         public TEntity Get(TEntity entity) =>
             _viewUpdater.Get(entity);
 
+        /// <inheritdoc />
         public virtual bool Update(TEntity namedEntity, bool isDBUpdated = true)
         {
             _logger.LogInformation($"Выполнение операции {nameof(Update)} в классе {nameof(ObservableDbCollection<TEntity>)}");
@@ -126,6 +153,7 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
             return true;
         }
 
+        /// <inheritdoc />
         public void BatchUpdate(IEnumerable<TEntity> entities)
         {
             _logger.LogInformation($"Выполнение операции {nameof(BatchUpdate)} в классе {nameof(ObservableDbCollection<TEntity>)}");
@@ -137,6 +165,7 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
             _logger.LogInformation($"Операция {nameof(Update)} в классе {nameof(ObservableDbCollection<TEntity>)} выполнена успешно");
         }
 
+        /// <inheritdoc />
         public void UpdateFromDB()
         {
             _logger.LogInformation($"Выполнение операции {nameof(UpdateFromDB)} в классе {nameof(ObservableDbCollection<TEntity>)}");

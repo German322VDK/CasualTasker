@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TaskStore
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TaskStore
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CasualTasker.Services.Stores.TaskStore">
+  
+  
+  <h1 id="CasualTasker_Services_Stores_TaskStore" data-uid="CasualTasker.Services.Stores.TaskStore" class="text-break">Class TaskStore
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a store for managing task entities.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html">DbStore</a>&lt;<a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a>&gt;</div>
+    <div class="level2"><span class="xref">TaskStore</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="CasualTasker.Services.Stores.IStore-1.html">IStore</a>&lt;<a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a>&gt;</div>
+    <div><a class="xref" href="CasualTasker.Services.Stores.IStoreSync-1.html">IStoreSync</a>&lt;<a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a>&gt;</div>
+    <div><a class="xref" href="CasualTasker.Services.Stores.IStoreAsync-1.html">IStoreAsync</a>&lt;<a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html#CasualTasker_Services_Stores_DbStore_1_Delete_System_Int32_">DbStore&lt;TaskDTO&gt;.Delete(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html#CasualTasker_Services_Stores_DbStore_1_DeleteAsync_System_Int32_">DbStore&lt;TaskDTO&gt;.DeleteAsync(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html#CasualTasker_Services_Stores_DbStore_1_Update__0_">DbStore&lt;TaskDTO&gt;.Update(TaskDTO)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html#CasualTasker_Services_Stores_DbStore_1_UpdateAsync__0_">DbStore&lt;TaskDTO&gt;.UpdateAsync(TaskDTO)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html#CasualTasker_Services_Stores_DbStore_1_CheckEntityExist_System_Int32_System_String_System_String_">DbStore&lt;TaskDTO&gt;.CheckEntityExist(Int32, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html#CasualTasker_Services_Stores_DbStore_1_ValidationEntityWithException__0_System_String_System_String_">DbStore&lt;TaskDTO&gt;.ValidationEntityWithException(TaskDTO, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Services.Stores.DbStore-1.html#CasualTasker_Services_Stores_DbStore_1_ClearTracker">DbStore&lt;TaskDTO&gt;.ClearTracker()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CasualTasker.Services.Stores.html">CasualTasker.Services.Stores</a></h6>
+  <h6><strong>Assembly</strong>: CasualTasker.Services.dll</h6>
+  <h5 id="CasualTasker_Services_Stores_TaskStore_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TaskStore : DbStore&lt;TaskDTO&gt;, IStore&lt;TaskDTO&gt;, IStoreSync&lt;TaskDTO&gt;, IStoreAsync&lt;TaskDTO&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Services_Stores_TaskStore__ctor_CasualTasker_Database_Context_CasualTaskerDbContext_CasualTasker_Services_Fallbacks_ICategoryFallbackService_Microsoft_Extensions_Logging_ILogger_CasualTasker_Services_Stores_TaskStore__.md&amp;value=---%0Auid%3A%20CasualTasker.Services.Stores.TaskStore.%23ctor(CasualTasker.Database.Context.CasualTaskerDbContext%2CCasualTasker.Services.Fallbacks.ICategoryFallbackService%2CMicrosoft.Extensions.Logging.ILogger%7BCasualTasker.Services.Stores.TaskStore%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker.Services/Stores/TaskStore.cs/#L24">View Source</a>
+  </span>
+  <a id="CasualTasker_Services_Stores_TaskStore__ctor_" data-uid="CasualTasker.Services.Stores.TaskStore.#ctor*"></a>
+  <h4 id="CasualTasker_Services_Stores_TaskStore__ctor_CasualTasker_Database_Context_CasualTaskerDbContext_CasualTasker_Services_Fallbacks_ICategoryFallbackService_Microsoft_Extensions_Logging_ILogger_CasualTasker_Services_Stores_TaskStore__" data-uid="CasualTasker.Services.Stores.TaskStore.#ctor(CasualTasker.Database.Context.CasualTaskerDbContext,CasualTasker.Services.Fallbacks.ICategoryFallbackService,Microsoft.Extensions.Logging.ILogger{CasualTasker.Services.Stores.TaskStore})">TaskStore(CasualTaskerDbContext, ICategoryFallbackService, ILogger&lt;TaskStore&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="CasualTasker.Services.Stores.TaskStore.html">TaskStore</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskStore(CasualTaskerDbContext dbContext, ICategoryFallbackService categoryFallbackService, ILogger&lt;TaskStore&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.Database.Context.CasualTaskerDbContext.html">CasualTaskerDbContext</a></td>
+        <td><span class="parametername">dbContext</span></td>
+        <td><p>The database context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CasualTasker.Services.Fallbacks.ICategoryFallbackService.html">ICategoryFallbackService</a></td>
+        <td><span class="parametername">categoryFallbackService</span></td>
+        <td><p>The service for managing fallback categories.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="CasualTasker.Services.Stores.TaskStore.html">TaskStore</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger for logging information and errors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Services_Stores_TaskStore_Add_CasualTasker_DTO_TaskDTO_.md&amp;value=---%0Auid%3A%20CasualTasker.Services.Stores.TaskStore.Add(CasualTasker.DTO.TaskDTO)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker.Services/Stores/TaskStore.cs/#L39">View Source</a>
+  </span>
+  <a id="CasualTasker_Services_Stores_TaskStore_Add_" data-uid="CasualTasker.Services.Stores.TaskStore.Add*"></a>
+  <h4 id="CasualTasker_Services_Stores_TaskStore_Add_CasualTasker_DTO_TaskDTO_" data-uid="CasualTasker.Services.Stores.TaskStore.Add(CasualTasker.DTO.TaskDTO)">Add(TaskDTO)</h4>
+  <div class="markdown level1 summary"><p>Adds a new task to the store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TaskDTO Add(TaskDTO item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The task to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a></td>
+        <td><p>The added task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CasualTasker.Services.Stores.DbStore&lt;CasualTasker.DTO.TaskDTO&gt;.Add(CasualTasker.DTO.TaskDTO)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Services_Stores_TaskStore_AddAsync_CasualTasker_DTO_TaskDTO_.md&amp;value=---%0Auid%3A%20CasualTasker.Services.Stores.TaskStore.AddAsync(CasualTasker.DTO.TaskDTO)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker.Services/Stores/TaskStore.cs/#L55">View Source</a>
+  </span>
+  <a id="CasualTasker_Services_Stores_TaskStore_AddAsync_" data-uid="CasualTasker.Services.Stores.TaskStore.AddAsync*"></a>
+  <h4 id="CasualTasker_Services_Stores_TaskStore_AddAsync_CasualTasker_DTO_TaskDTO_" data-uid="CasualTasker.Services.Stores.TaskStore.AddAsync(CasualTasker.DTO.TaskDTO)">AddAsync(TaskDTO)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously adds a new task to the store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override async Task&lt;TaskDTO&gt; AddAsync(TaskDTO item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The task to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a>&gt;</td>
+        <td><p>A task that represents the asynchronous operation, containing the added task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CasualTasker.Services.Stores.DbStore&lt;CasualTasker.DTO.TaskDTO&gt;.AddAsync(CasualTasker.DTO.TaskDTO)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Services_Stores_TaskStore_GetAll.md&amp;value=---%0Auid%3A%20CasualTasker.Services.Stores.TaskStore.GetAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker.Services/Stores/TaskStore.cs/#L70">View Source</a>
+  </span>
+  <a id="CasualTasker_Services_Stores_TaskStore_GetAll_" data-uid="CasualTasker.Services.Stores.TaskStore.GetAll*"></a>
+  <h4 id="CasualTasker_Services_Stores_TaskStore_GetAll" data-uid="CasualTasker.Services.Stores.TaskStore.GetAll">GetAll()</h4>
+  <div class="markdown level1 summary"><p>Retrieves all tasks from the store, including their categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IQueryable&lt;TaskDTO&gt; GetAll()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IQueryable</span>&lt;<a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a>&gt;</td>
+        <td><p>An <see cref="!:IQueryable&lt;TaskDTO>"></see> representing the collection of tasks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CasualTasker.Services.Stores.DbStore&lt;CasualTasker.DTO.TaskDTO&gt;.GetAll()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Services_Stores_TaskStore_GetById_System_Int32_.md&amp;value=---%0Auid%3A%20CasualTasker.Services.Stores.TaskStore.GetById(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker.Services/Stores/TaskStore.cs/#L78">View Source</a>
+  </span>
+  <a id="CasualTasker_Services_Stores_TaskStore_GetById_" data-uid="CasualTasker.Services.Stores.TaskStore.GetById*"></a>
+  <h4 id="CasualTasker_Services_Stores_TaskStore_GetById_System_Int32_" data-uid="CasualTasker.Services.Stores.TaskStore.GetById(System.Int32)">GetById(Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a task by its unique identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TaskDTO GetById(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique identifier of the task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a></td>
+        <td><p>The task with the specified identifier, or null if not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CasualTasker.Services.Stores.DbStore&lt;CasualTasker.DTO.TaskDTO&gt;.GetById(System.Int32)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="CasualTasker.Services.Stores.IStore-1.html">IStore&lt;TEntity&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="CasualTasker.Services.Stores.IStoreSync-1.html">IStoreSync&lt;TEntity&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="CasualTasker.Services.Stores.IStoreAsync-1.html">IStoreAsync&lt;TEntity&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Services_Stores_TaskStore.md&amp;value=---%0Auid%3A%20CasualTasker.Services.Stores.TaskStore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker.Services/Stores/TaskStore.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

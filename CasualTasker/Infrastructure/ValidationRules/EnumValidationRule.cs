@@ -3,8 +3,17 @@ using System.Windows.Controls;
 
 namespace CasualTasker.Infrastructure.ValidationRules
 {
-    public class EnumValidationRule : ValidationRule
+    /// <summary>
+    /// Custom validation rule to ensure that an enum value is not the default (0).
+    /// </summary>
+    public sealed class EnumValidationRule : ValidationRule
     {
+        /// <summary>
+        /// Validates the provided value against the rules for enums.
+        /// </summary>
+        /// <param name="value">The value to validate.</param>
+        /// <param name="cultureInfo">The culture information.</param>
+        /// <returns>A ValidationResult indicating whether the validation succeeded or failed.</returns>
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
             if (value == null)

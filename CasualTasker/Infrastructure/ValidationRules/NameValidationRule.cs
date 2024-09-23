@@ -3,8 +3,17 @@ using System.Windows.Controls;
 
 namespace CasualTasker.Infrastructure.ValidationRules
 {
-    public class NameValidationRule : ValidationRule
+    /// <summary>
+    /// Custom validation rule to ensure that a name is not empty or whitespace.
+    /// </summary>
+    public sealed class NameValidationRule : ValidationRule
     {
+        /// <summary>
+        /// Validates the provided value to ensure it is a non-empty string.
+        /// </summary>
+        /// <param name="value">The value to validate.</param>
+        /// <param name="cultureInfo">The culture information.</param>
+        /// <returns>A ValidationResult indicating whether the validation succeeded or failed.</returns>
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
             if (value is string name)

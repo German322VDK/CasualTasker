@@ -1,0 +1,591 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MainPageViewModel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MainPageViewModel
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CasualTasker.ViewModels.MainPageViewModel">
+  
+  
+  <h1 id="CasualTasker_ViewModels_MainPageViewModel" data-uid="CasualTasker.ViewModels.MainPageViewModel" class="text-break">Class MainPageViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>ViewModel for the main page of the application.
+Provides filtering functionality for tasks by category,
+status, and date, as well as managing task selection and deletion.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="CasualTasker.ViewModels.Base.ViewModelBase.html">ViewModelBase</a></div>
+    <div class="level2"><span class="xref">MainPageViewModel</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CasualTasker.ViewModels.Base.ViewModelBase.html#CasualTasker_ViewModels_Base_ViewModelBase_PropertyChanged">ViewModelBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.ViewModels.Base.ViewModelBase.html#CasualTasker_ViewModels_Base_ViewModelBase_OnPropertyChanged_System_String_">ViewModelBase.OnPropertyChanged(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.ViewModels.Base.ViewModelBase.html#CasualTasker_ViewModels_Base_ViewModelBase_Set__1___0____0_System_String_">ViewModelBase.Set&lt;T&gt;(T, T, String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CasualTasker.ViewModels.html">CasualTasker.ViewModels</a></h6>
+  <h6><strong>Assembly</strong>: CasualTasker.dll</h6>
+  <h5 id="CasualTasker_ViewModels_MainPageViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MainPageViewModel : ViewModelBase, INotifyPropertyChanged</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel__ctor_CasualTasker_Infrastructure_ObservableDbCollections_DataRepository_Microsoft_Extensions_Logging_ILogger_CasualTasker_ViewModels_MainPageViewModel__.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.%23ctor(CasualTasker.Infrastructure.ObservableDbCollections.DataRepository%2CMicrosoft.Extensions.Logging.ILogger%7BCasualTasker.ViewModels.MainPageViewModel%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L42">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel__ctor_" data-uid="CasualTasker.ViewModels.MainPageViewModel.#ctor*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel__ctor_CasualTasker_Infrastructure_ObservableDbCollections_DataRepository_Microsoft_Extensions_Logging_ILogger_CasualTasker_ViewModels_MainPageViewModel__" data-uid="CasualTasker.ViewModels.MainPageViewModel.#ctor(CasualTasker.Infrastructure.ObservableDbCollections.DataRepository,Microsoft.Extensions.Logging.ILogger{CasualTasker.ViewModels.MainPageViewModel})">MainPageViewModel(DataRepository, ILogger&lt;MainPageViewModel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="CasualTasker.ViewModels.MainPageViewModel.html">MainPageViewModel</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MainPageViewModel(DataRepository dataRepository, ILogger&lt;MainPageViewModel&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.DataRepository.html">DataRepository</a></td>
+        <td><span class="parametername">dataRepository</span></td>
+        <td><p>Instance of DataRepository for data access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="CasualTasker.ViewModels.MainPageViewModel.html">MainPageViewModel</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Logger for tracking actions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_Categories.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.Categories%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L62">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_Categories_" data-uid="CasualTasker.ViewModels.MainPageViewModel.Categories*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_Categories" data-uid="CasualTasker.ViewModels.MainPageViewModel.Categories">Categories</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of categories for display in the UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollectionView Categories { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ComponentModel.ICollectionView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_DeleteTaskCommand.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.DeleteTaskCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L161">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_DeleteTaskCommand_" data-uid="CasualTasker.ViewModels.MainPageViewModel.DeleteTaskCommand*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_DeleteTaskCommand" data-uid="CasualTasker.ViewModels.MainPageViewModel.DeleteTaskCommand">DeleteTaskCommand</h4>
+  <div class="markdown level1 summary"><p>Gets the command for deleting a selected task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LambdaCommand DeleteTaskCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.Infrastructure.Commands.LambdaCommand.html">LambdaCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_DownloadDataCommand.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.DownloadDataCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L166">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_DownloadDataCommand_" data-uid="CasualTasker.ViewModels.MainPageViewModel.DownloadDataCommand*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_DownloadDataCommand" data-uid="CasualTasker.ViewModels.MainPageViewModel.DownloadDataCommand">DownloadDataCommand</h4>
+  <div class="markdown level1 summary"><p>Gets the command for download data from db.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LambdaCommand DownloadDataCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.Infrastructure.Commands.LambdaCommand.html">LambdaCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_IsUsedCategoryFilter.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.IsUsedCategoryFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L127">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_IsUsedCategoryFilter_" data-uid="CasualTasker.ViewModels.MainPageViewModel.IsUsedCategoryFilter*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_IsUsedCategoryFilter" data-uid="CasualTasker.ViewModels.MainPageViewModel.IsUsedCategoryFilter">IsUsedCategoryFilter</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the category filter is being used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUsedCategoryFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_IsUsedDateFilter.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.IsUsedDateFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L136">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_IsUsedDateFilter_" data-uid="CasualTasker.ViewModels.MainPageViewModel.IsUsedDateFilter*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_IsUsedDateFilter" data-uid="CasualTasker.ViewModels.MainPageViewModel.IsUsedDateFilter">IsUsedDateFilter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUsedDateFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_IsUsedStatusFilter.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.IsUsedStatusFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L148">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_IsUsedStatusFilter_" data-uid="CasualTasker.ViewModels.MainPageViewModel.IsUsedStatusFilter*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_IsUsedStatusFilter" data-uid="CasualTasker.ViewModels.MainPageViewModel.IsUsedStatusFilter">IsUsedStatusFilter</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the date filter is being used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUsedStatusFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_SearchPhrase.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.SearchPhrase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L101">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_SearchPhrase_" data-uid="CasualTasker.ViewModels.MainPageViewModel.SearchPhrase*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_SearchPhrase" data-uid="CasualTasker.ViewModels.MainPageViewModel.SearchPhrase">SearchPhrase</h4>
+  <div class="markdown level1 summary"><p>Search phrase for filtering tasks by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SearchPhrase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_SearchStatus.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.SearchStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L114">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_SearchStatus_" data-uid="CasualTasker.ViewModels.MainPageViewModel.SearchStatus*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_SearchStatus" data-uid="CasualTasker.ViewModels.MainPageViewModel.SearchStatus">SearchStatus</h4>
+  <div class="markdown level1 summary"><p>Status used for filtering tasks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CasualTaskStatus SearchStatus { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.CasualTaskStatus.html">CasualTaskStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_SelectedCategory.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.SelectedCategory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L67">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_SelectedCategory_" data-uid="CasualTasker.ViewModels.MainPageViewModel.SelectedCategory*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_SelectedCategory" data-uid="CasualTasker.ViewModels.MainPageViewModel.SelectedCategory">SelectedCategory</h4>
+  <div class="markdown level1 summary"><p>Selected category for filtering tasks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CategoryDTO SelectedCategory { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_SelectedDate.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.SelectedDate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L87">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_SelectedDate_" data-uid="CasualTasker.ViewModels.MainPageViewModel.SelectedDate*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_SelectedDate" data-uid="CasualTasker.ViewModels.MainPageViewModel.SelectedDate">SelectedDate</h4>
+  <div class="markdown level1 summary"><p>Selected date for filtering tasks by due date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime SelectedDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_SelectedTask.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.SelectedTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L79">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_SelectedTask_" data-uid="CasualTasker.ViewModels.MainPageViewModel.SelectedTask*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_SelectedTask" data-uid="CasualTasker.ViewModels.MainPageViewModel.SelectedTask">SelectedTask</h4>
+  <div class="markdown level1 summary"><p>Selected task for operations like deletion or editing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskDTO SelectedTask { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.TaskDTO.html">TaskDTO</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel_Tasks.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel.Tasks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L58">View Source</a>
+  </span>
+  <a id="CasualTasker_ViewModels_MainPageViewModel_Tasks_" data-uid="CasualTasker.ViewModels.MainPageViewModel.Tasks*"></a>
+  <h4 id="CasualTasker_ViewModels_MainPageViewModel_Tasks" data-uid="CasualTasker.ViewModels.MainPageViewModel.Tasks">Tasks</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of tasks for display in the UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollectionView Tasks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ComponentModel.ICollectionView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_ViewModels_MainPageViewModel.md&amp;value=---%0Auid%3A%20CasualTasker.ViewModels.MainPageViewModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/ViewModels/MainPageViewModel.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

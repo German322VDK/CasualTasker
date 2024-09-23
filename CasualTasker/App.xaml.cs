@@ -24,6 +24,10 @@ namespace CasualTasker
     public partial class App : Application
     {
         private static IHost? _hosting;
+
+        /// <summary>
+        /// Gets the hosting instance.
+        /// </summary>
         public static IHost Hosting => _hosting ??=
             Host.CreateDefaultBuilder(Environment.GetCommandLineArgs())
             .ConfigureAppConfiguration(cfg => cfg.AddJsonFile("appsettings.json", true, true))
@@ -39,8 +43,16 @@ namespace CasualTasker
             .ConfigureServices(ConfigureServices)
             .Build();
 
+        /// <summary>
+        /// Gets the service provider.
+        /// </summary>
         public static IServiceProvider Services => Hosting.Services;
 
+        /// <summary>
+        /// Configures services for dependency injection.
+        /// </summary>
+        /// <param name="host">The host builder context.</param>
+        /// <param name="services">The service collection.</param>
         private static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
         {
             services.AddDbContext<CasualTaskerDbContext>(opt =>
@@ -62,7 +74,10 @@ namespace CasualTasker
             services.AddSingleton<IExceptionHandlingService, ExceptionHandlingService>();
         }
 
-
+        /// <summary>
+        /// Called when the application starts.
+        /// </summary>
+        /// <param name="e">The startup event arguments.</param>
         protected async override void OnStartup(StartupEventArgs e)
         {
             DispatcherUnhandledException += OnDispatcherUnhandledException;
@@ -72,6 +87,9 @@ namespace CasualTasker
             await Services.GetRequiredService<CasualTaskerDbInitializer>().InitializeAsync();
         }
 
+        /// <summary>
+        /// Handles unhandled exceptions that occur on the dispatcher thread.
+        /// </summary>
         private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             var exceptionHandler = Services.GetRequiredService<IExceptionHandlingService>();
@@ -79,6 +97,9 @@ namespace CasualTasker
             e.Handled = true;
         }
 
+        /// <summary>
+        /// Handles unhandled exceptions that occur outside the dispatcher thread.
+        /// </summary>
         private void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             if (e.ExceptionObject is Exception ex)
@@ -88,6 +109,10 @@ namespace CasualTasker
             }
         }
 
+        /// <summary>
+        /// Sets the culture info for the application.
+        /// </summary>
+        /// <param name="name">The name of the culture.</param>
         private void SetCultureInfo(string name)
         {
             var culture = new CultureInfo(name);
@@ -97,6 +122,11 @@ namespace CasualTasker
             CultureInfo.CurrentUICulture = culture;
         }
 
+        /// <summary>
+        /// Creates a Serilog logger based on the given configuration.
+        /// </summary>
+        /// <param name="configuration">The configuration to read from.</param>
+        /// <returns>A configured Serilog logger.</returns>
         private static Serilog.ILogger CreateSerilogLogger(IConfiguration configuration)
         {
             return new LoggerConfiguration()

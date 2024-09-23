@@ -6,12 +6,21 @@ using Microsoft.Extensions.Logging;
 
 namespace CasualTasker.Services.Stores
 {
-    public class CategoryStore : DbStore<CategoryDTO>
+    /// <summary>
+    /// Represents a store for managing category entities.
+    /// </summary>
+    public sealed class CategoryStore : DbStore<CategoryDTO>
     {
         private readonly ILogger<CategoryStore> _logger;
         private readonly CasualTaskerDbContext _dbContext;
         private readonly ICategoryFallbackService _categoryFallbackService;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CategoryStore"/> class.
+        /// </summary>
+        /// <param name="dbContext">The database context.</param>
+        /// <param name="logger">The logger for logging information and errors.</param>
+        /// <param name="categoryFallbackService">The service for managing fallback categories.</param>
         public CategoryStore(
             CasualTaskerDbContext dbContext, 
             ILogger<CategoryStore> logger,
@@ -22,6 +31,11 @@ namespace CasualTasker.Services.Stores
             _logger = logger;
         }
 
+        /// <summary>
+        /// Deletes a category by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the category to delete.</param>
+        /// <returns>True if the category was successfully deleted; otherwise, false.</returns>
         public override bool Delete(int id)
         {
             _logger.LogInformation($"Начало работы метода {nameof(Delete)} класса {nameof(CategoryStore)}");
@@ -35,6 +49,11 @@ namespace CasualTasker.Services.Stores
             return base.Delete(id);
         }
 
+        /// <summary>
+        /// Asynchronously deletes a category by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the category to delete.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains true if the category was successfully deleted; otherwise, false.</returns>
         public override async Task<bool> DeleteAsync(int id)
         {
             _logger.LogInformation($"Начало работы метода {nameof(Delete)} класса {nameof(CategoryStore)}");
@@ -48,6 +67,10 @@ namespace CasualTasker.Services.Stores
             return await base.DeleteAsync(id);
         }
 
+        /// <summary>
+        /// Updates tasks that are associated with a deleted category.
+        /// </summary>
+        /// <param name="id">The unique identifier of the deleted category.</param>
         private void UpdateTasksWithDeletedCategory(int id)
         {
             using (_dbContext.Database.BeginTransaction())

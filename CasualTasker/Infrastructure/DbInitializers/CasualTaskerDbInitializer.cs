@@ -7,7 +7,10 @@ using Microsoft.Extensions.Logging;
 
 namespace CasualTasker.Infrastructure.DbInitializers
 {
-    public class CasualTaskerDbInitializer
+    /// <summary>
+    /// Initializes the CasualTasker database with default categories and tasks if none exist.
+    /// </summary>
+    public sealed class CasualTaskerDbInitializer
     {
         private readonly ILogger _logger;
         private readonly CasualTaskerDbContext _dbContext;
@@ -15,6 +18,14 @@ namespace CasualTasker.Infrastructure.DbInitializers
         private readonly IStore<TaskDTO> _tasksStore;
         private readonly ICategoryFallbackService _categoryFallbackService;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CasualTaskerDbInitializer"/> class.
+        /// </summary>
+        /// <param name="logger">The logger used for logging initialization process.</param>
+        /// <param name="dbContext">The database context for the application.</param>
+        /// <param name="categoriesStore">The store for managing category data.</param>
+        /// <param name="tasksStore">The store for managing task data.</param>
+        /// <param name="categoryFallbackService">The service providing fallback categories for deleted tasks.</param>
         public CasualTaskerDbInitializer(
             ILogger<CasualTaskerDbInitializer> logger, 
             CasualTaskerDbContext dbContext,
@@ -30,6 +41,10 @@ namespace CasualTasker.Infrastructure.DbInitializers
             _categoryFallbackService = categoryFallbackService;
         }
 
+        /// <summary>
+        /// Performs the database migration and initializes the categories and tasks if they do not exist.
+        /// </summary>
+        /// <returns>A task that represents the asynchronous initialization operation.</returns>
         public async Task InitializeAsync()
         {
             _logger.LogInformation($"Выполнение операции {nameof(InitializeAsync)} в классе {nameof(CasualTaskerDbInitializer)}");
@@ -39,6 +54,10 @@ namespace CasualTasker.Infrastructure.DbInitializers
             await InitializeTasksAsync();
         }
 
+        /// <summary>
+        /// Initializes the default categories in the database if none exist.
+        /// </summary>
+        /// <returns>A task that represents the asynchronous category initialization operation.</returns>
         private async Task InitializeCagetoriesAsync()
         {
             _logger.LogInformation($"Выполнение операции {nameof(InitializeCagetoriesAsync)} в классе {nameof(CasualTaskerDbInitializer)}");
@@ -68,6 +87,10 @@ namespace CasualTasker.Infrastructure.DbInitializers
             await _categoriesStore.AddAsync(newCategory);
         }
 
+        /// <summary>
+        /// Initializes the default tasks in the database if none exist.
+        /// </summary>
+        /// <returns>A task that represents the asynchronous task initialization operation.</returns>
         private async Task InitializeTasksAsync()
         {
             _logger.LogInformation($"Выполнение операции {nameof(InitializeTasksAsync)} в классе {nameof(CasualTaskerDbInitializer)}");

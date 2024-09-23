@@ -7,7 +7,10 @@ using System.ComponentModel;
 
 namespace CasualTasker.ViewModels
 {
-    public class EditCategoryPageViewModel : ViewModelBase
+    /// <summary>
+    /// ViewModel for editing categories in the application.
+    /// </summary>
+    public sealed class EditCategoryPageViewModel : ViewModelBase
     {
         private readonly ILogger<EditCategoryPageViewModel> _logger;
 
@@ -21,6 +24,11 @@ namespace CasualTasker.ViewModels
         private LambdaCommand? _updateCategoryCommand;
         private LambdaCommand? _deleteCategoryCommand;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditCategoryPageViewModel"/> class.
+        /// </summary>
+        /// <param name="repository">The data repository for accessing categories.</param>
+        /// <param name="logger">Logger for logging operations.</param>
         public EditCategoryPageViewModel(DataRepository repository, ILogger<EditCategoryPageViewModel> logger)
         {
             _logger = logger;
@@ -29,6 +37,9 @@ namespace CasualTasker.ViewModels
             Categories = _categoriesData.ViewEntities;
         }
 
+        /// <summary>
+        /// Gets or sets the currently selected category for editing.
+        /// </summary>
         public CategoryDTO SelectedCategory
         {
             get => _selectedCategory;
@@ -41,6 +52,9 @@ namespace CasualTasker.ViewModels
                 EditCategory = (CategoryDTO)SelectedCategory.Clone();
             }
         }
+        /// <summary>
+        /// Gets or sets the category being edited.
+        /// </summary>
         public CategoryDTO EditCategory
         {
             get => _editCategory;
@@ -50,14 +64,24 @@ namespace CasualTasker.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets the collection of categories for display in the UI.
+        /// </summary>
         public ICollectionView Categories { get; set; }
 
+        /// <summary>
+        /// Gets the command for adding a new category.
+        /// </summary>
         public LambdaCommand AddCategoryCommand => _addCategoryCommand ??=
             new LambdaCommand(OnAddCategoryCommandExecuted, CanAddCategoryCommandExecute);
-
+        /// <summary>
+        /// Gets the command for updating the selected category.
+        /// </summary>
         public LambdaCommand UpdateCategoryCommand => _updateCategoryCommand ??=
             new LambdaCommand(OnUpdateCategoryCommandExecuted, CanUpdateCategoryCommandExecute);
-
+        /// <summary>
+        /// Gets the command for deleting the selected category.
+        /// </summary>
         public LambdaCommand DeleteCategoryCommand => _deleteCategoryCommand ??=
             new LambdaCommand(OnDeleteCategoryCommandExecuted, CanDeleteCategoryCommandExecute);
 
