@@ -5,7 +5,7 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
     /// <summary>
     /// Synchronizes tasks with categories, handling updates and deletions.
     /// </summary>
-    public class CategoryTaskSynchronizer
+    public sealed class CategoryTaskSynchronizer
     {
         private readonly IObservableDbCollection<TaskDTO> _tasks;
         private readonly ObservableCategoryDbCollection _categories;

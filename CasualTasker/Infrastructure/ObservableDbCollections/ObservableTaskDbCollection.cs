@@ -9,7 +9,7 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
     /// Inherits functionality from <see cref="ObservableDbCollection{TaskDTO}"/> for managing
     /// tasks in both the database and the user interface.
     /// </summary>
-    public class ObservableTaskDbCollection : ObservableDbCollection<TaskDTO>
+    public sealed class ObservableTaskDbCollection : ObservableDbCollection<TaskDTO>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservableTaskDbCollection"/> class.

@@ -6,7 +6,7 @@ namespace CasualTasker.Infrastructure.ValidationRules
     /// <summary>
     /// Custom validation rule to ensure that a name is not empty or whitespace.
     /// </summary>
-    public class NameValidationRule : ValidationRule
+    public sealed class NameValidationRule : ValidationRule
     {
         /// <summary>
         /// Validates the provided value to ensure it is a non-empty string.

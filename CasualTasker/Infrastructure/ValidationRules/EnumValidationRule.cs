@@ -6,7 +6,7 @@ namespace CasualTasker.Infrastructure.ValidationRules
     /// <summary>
     /// Custom validation rule to ensure that an enum value is not the default (0).
     /// </summary>
-    public class EnumValidationRule : ValidationRule
+    public sealed class EnumValidationRule : ValidationRule
     {
         /// <summary>
         /// Validates the provided value against the rules for enums.

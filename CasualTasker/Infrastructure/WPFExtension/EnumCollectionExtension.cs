@@ -6,7 +6,7 @@ namespace CasualTasker.Infrastructure.WPFExtension
     /// Provides a markup extension that generates a list of values from a specified enum type.
     /// This can be used in XAML to bind to enum values, enabling easier access to enum members.
     /// </summary>
-    public class EnumCollectionExtension : MarkupExtension
+    public sealed class EnumCollectionExtension : MarkupExtension
     {
         /// <summary>
         /// Gets the type of the enum from which values are generated.

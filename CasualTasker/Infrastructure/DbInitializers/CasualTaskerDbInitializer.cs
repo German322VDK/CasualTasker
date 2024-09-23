@@ -10,7 +10,7 @@ namespace CasualTasker.Infrastructure.DbInitializers
     /// <summary>
     /// Initializes the CasualTasker database with default categories and tasks if none exist.
     /// </summary>
-    public class CasualTaskerDbInitializer
+    public sealed class CasualTaskerDbInitializer
     {
         private readonly ILogger _logger;
         private readonly CasualTaskerDbContext _dbContext;

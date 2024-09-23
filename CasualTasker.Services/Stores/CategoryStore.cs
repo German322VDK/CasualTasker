@@ -9,7 +9,7 @@ namespace CasualTasker.Services.Stores
     /// <summary>
     /// Represents a store for managing category entities.
     /// </summary>
-    public class CategoryStore : DbStore<CategoryDTO>
+    public sealed class CategoryStore : DbStore<CategoryDTO>
     {
         private readonly ILogger<CategoryStore> _logger;
         private readonly CasualTaskerDbContext _dbContext;

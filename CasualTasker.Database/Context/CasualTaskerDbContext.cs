@@ -8,7 +8,7 @@ namespace CasualTasker.Database.Context
     /// providing access to tasks and categories in the SQLite database.
     /// Inherits from <see cref="DbContext"/> and configures the query tracking behavior.
     /// </summary>
-    public class CasualTaskerDbContext : DbContext
+    public sealed class CasualTaskerDbContext : DbContext
     {
         /// <summary>
         /// Gets or sets the <see cref="DbSet{TaskDTO}"/> representing the tasks in the database.
@@ -23,7 +23,7 @@ namespace CasualTasker.Database.Context
         /// <summary>
         /// Initializes a new instance of the <see cref="CasualTaskerDbContext"/> class.
         /// Configures the database options and disables default entity tracking 
-        /// by setting the <see cref="ChangeTracker.QueryTrackingBehavior"/> to <see cref="QueryTrackingBehavior.NoTracking"/>.
+        /// by setting the ChangeTracker.QueryTrackingBehavior to <see cref="QueryTrackingBehavior.NoTracking"/>.
         /// </summary>
         /// <param name="options">
         /// The options to be used by this <see cref="DbContext"/> instance, typically passed from the DI container.

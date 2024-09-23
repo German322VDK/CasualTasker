@@ -7,7 +7,7 @@ namespace CasualTasker.Infrastructure.WPFExtension
     /// <summary>
     /// Converts a color in hex format to a Color object and vice versa.
     /// </summary>
-    public class ColorToHexConverter : IValueConverter
+    public sealed class ColorToHexConverter : IValueConverter
     {
         /// <summary>
         /// Converts a hex string to a Color object.

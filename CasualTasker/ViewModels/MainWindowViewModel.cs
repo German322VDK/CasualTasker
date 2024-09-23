@@ -5,7 +5,7 @@ namespace CasualTasker.ViewModels
     /// <summary>
     /// ViewModel for View MainWindow
     /// </summary>
-    public class MainWindowViewModel : ViewModelBase
+    public sealed class MainWindowViewModel : ViewModelBase
     {
         private string _title = "CasualTasker";
 

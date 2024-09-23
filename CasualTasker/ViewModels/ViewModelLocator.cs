@@ -5,7 +5,7 @@ namespace CasualTasker.ViewModels
     /// <summary>
     /// Provides access to ViewModels for data binding in the application.
     /// </summary>
-    public class ViewModelLocator
+    public sealed class ViewModelLocator
     {
         /// <summary>
         /// Gets the instance of MainWindowViewModel.

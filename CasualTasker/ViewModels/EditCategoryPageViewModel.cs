@@ -10,7 +10,7 @@ namespace CasualTasker.ViewModels
     /// <summary>
     /// ViewModel for editing categories in the application.
     /// </summary>
-    public class EditCategoryPageViewModel : ViewModelBase
+    public sealed class EditCategoryPageViewModel : ViewModelBase
     {
         private readonly ILogger<EditCategoryPageViewModel> _logger;
 

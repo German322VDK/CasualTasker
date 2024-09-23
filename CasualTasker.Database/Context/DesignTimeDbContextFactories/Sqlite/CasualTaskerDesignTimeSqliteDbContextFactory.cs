@@ -9,6 +9,11 @@ namespace CasualTasker.Database.Context.DesignTimeDbContextFactories.Sqlite
     /// </summary>
     public class CasualTaskerDesignTimeSqliteDbContextFactory : IDesignTimeDbContextFactory<CasualTaskerDbContext>
     {
+        /// <summary>
+        /// Creates a new instance of <see cref="CasualTaskerDbContext"/> with the specified arguments.
+        /// </summary>
+        /// <param name="args">Arguments used to configure the context (not utilized in this implementation).</param>
+        /// <returns>A new instance of <see cref="CasualTaskerDbContext"/> configured for SQLite.</returns>
         public CasualTaskerDbContext CreateDbContext(string[] args)
         {
             const string connection_string = "Data Source=CasualTaskManager.db;Cache=Shared";

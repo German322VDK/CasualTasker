@@ -6,7 +6,7 @@ namespace CasualTasker.Services.Fallbacks
     /// <summary>
     /// Implements the <see cref="ICategoryFallbackService"/> to provide access to fallback categories.
     /// </summary>
-    public class CategoryFallbackService : ICategoryFallbackService
+    public sealed class CategoryFallbackService : ICategoryFallbackService
     {
         private const string DELETED_CATEGORY_NAME = "Удалено";
         private const string COMMON_CATEGORY_NAME = "Общее";

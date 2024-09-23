@@ -41,13 +41,13 @@ namespace CasualTasker.Infrastructure.Commands.Base
         /// </summary>
         /// <param name="parameter">The command parameter.</param>
         /// <returns><see langword="true"/> if the command can execute; otherwise, <see langword="false"/>.</returns>
-        protected virtual bool CanExecute(object p) => true;
+        protected virtual bool CanExecute(object parameter) => true;
 
         /// <summary>
         /// Defines the logic to be executed when the command is invoked.
         /// This method must be overridden in derived classes to provide the actual command behavior.
         /// </summary>
         /// <param name="parameter">The command parameter.</param>
-        protected abstract void Execute(object p);
+        protected abstract void Execute(object parameter);
     }
 }

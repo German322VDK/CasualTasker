@@ -10,7 +10,7 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
     /// Extends <see cref="ObservableDbCollection{CategoryDTO}"/> to provide specific logic for categories,
     /// including handling fallback categories and firing events when categories are updated or deleted.
     /// </summary>
-    public class ObservableCategoryDbCollection : ObservableDbCollection<CategoryDTO>
+    public sealed class ObservableCategoryDbCollection : ObservableDbCollection<CategoryDTO>
     {
         private readonly ICategoryFallbackService _categoryFallbackService;
 

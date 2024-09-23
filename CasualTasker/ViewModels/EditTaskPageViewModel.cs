@@ -10,7 +10,7 @@ namespace CasualTasker.ViewModels
     /// <summary>
     /// ViewModel for editing tasks in the application.
     /// </summary>
-    public class EditTaskPageViewModel : ViewModelBase
+    public sealed class EditTaskPageViewModel : ViewModelBase
     {
         private readonly ILogger<EditTaskPageViewModel> _logger;
 

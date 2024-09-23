@@ -12,7 +12,7 @@ namespace CasualTasker.ViewModels
     /// Provides filtering functionality for tasks by category,
     /// status, and date, as well as managing task selection and deletion.
     /// </summary>
-    public class MainPageViewModel : ViewModelBase
+    public sealed class MainPageViewModel : ViewModelBase
     {
         private readonly ILogger<MainPageViewModel> _logger;
 

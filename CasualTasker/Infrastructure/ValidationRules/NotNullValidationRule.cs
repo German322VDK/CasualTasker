@@ -6,7 +6,7 @@ namespace CasualTasker.Infrastructure.ValidationRules
     /// <summary>
     /// Custom validation rule to ensure that a value is not null.
     /// </summary>
-    public class NotNullValidationRule : ValidationRule
+    public sealed class NotNullValidationRule : ValidationRule
     {
         /// <summary>
         /// Validates the provided value to ensure it is not null.

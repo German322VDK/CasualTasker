@@ -15,9 +15,13 @@ namespace CasualTasker.Infrastructure.ObservableDbCollections
     /// <typeparam name="TEntity">The type of entity, which must inherit from <see cref="NamedEntity"/>.</typeparam>
     public class ObservableDbCollection<TEntity> : IObservableDbCollection<TEntity> where TEntity : NamedEntity
     {
-        protected readonly ILogger<ObservableDbCollection<TEntity>> _logger;
         private IViewUpdater<TEntity> _viewUpdater;
         private readonly IStore<TEntity> _store;
+
+        /// <summary>
+        /// The logger used for logging information, warnings, and errors related to the <see cref="ObservableDbCollection{TEntity}"/>.
+        /// </summary>
+        protected readonly ILogger<ObservableDbCollection<TEntity>> _logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservableDbCollection{TEntity}"/> class.
