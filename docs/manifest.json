@@ -1,0 +1,894 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/data/C#/Public/CasualTasker/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.App.html",
+          "hash": "aUfIV/6iZdQMEkTqc4D30mxA9/ycKV1aE3AyyHiwiOk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.DTO.Base.NamedEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.DTO.Base.NamedEntity.html",
+          "hash": "xtVPfGbz/Z8IR05oOZwSPySOw7B+Uw+MGOt5xpePAWM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.DTO.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.DTO.Base.html",
+          "hash": "t509zfj/vLXGBxu3LQQU7ShkvinGvfXSuG4qzcR3BMY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.DTO.CasualTaskStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.DTO.CasualTaskStatus.html",
+          "hash": "QUgIbJu/kr32S31sIcf+8CNcP0FS+vZHOXxEvl75LUE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.DTO.CategoryDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.DTO.CategoryDTO.html",
+          "hash": "YS6NZuiOFXIK9/HA5GmMJRdYE6MXOdaREWmanWOM23w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.DTO.TaskDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.DTO.TaskDTO.html",
+          "hash": "81SNO2cL7BNKhvbm43dUATWO58RUgeKJzZGdgYcP17Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.DTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.DTO.html",
+          "hash": "uCqiRIqcWGvoIqCBsiyEzDI8UYum7n4dmFuwjM4gO7c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Database.Context.CasualTaskerDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Database.Context.CasualTaskerDbContext.html",
+          "hash": "v65dU+bLwOAEzXH/+R7pxFZ2nxQVHcBogU8Rj7WsGi0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Database.Context.DesignTimeDbContextFactories.Sqlite.CasualTaskerDesignTimeSqliteDbContextFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Database.Context.DesignTimeDbContextFactories.Sqlite.CasualTaskerDesignTimeSqliteDbContextFactory.html",
+          "hash": "NrLDXNXtzSeqJm1R5GrtvBkkMdcTzQnhukz2miozn00="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Database.Context.DesignTimeDbContextFactories.Sqlite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Database.Context.DesignTimeDbContextFactories.Sqlite.html",
+          "hash": "OS71GYErjLCnDyEjciezV8S1qmXQhhrgSkaA8WR7YSI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Database.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Database.Context.html",
+          "hash": "XzX3yPSAqBr357RfuNsGWX+/rg0wvwaK9mSBMmbFRQY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Database.Migrations.Init.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Database.Migrations.Init.html",
+          "hash": "t3rBWqkfe71e7jRIaJMSnyedMAq7AF3SGvnnmSRczx0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Database.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Database.Migrations.html",
+          "hash": "npdYMWSaVNxtPjx/OERlt8p+4CRsuGoeonZZcUEkUuI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.Commands.Base.Command.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.Commands.Base.Command.html",
+          "hash": "wSfFbMTs979ASxvUpMCPbcCpk2tPJJhKG0nBL92iuU4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.Commands.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.Commands.Base.html",
+          "hash": "nsTAp0NkaCS7+f8kDtBj8Tm1jHZz3spmemdn068gOws="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.Commands.LambdaCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.Commands.LambdaCommand.html",
+          "hash": "JsbCWcucxymL3hC95WrL7ig1nDB1pWLWQTGJ51eXkdw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.Commands.html",
+          "hash": "pqoIbWjrUsCjl6Ggk5GgRyD/iqNa5ZjH08Z//Zor790="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.DbInitializers.CasualTaskerDbInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.DbInitializers.CasualTaskerDbInitializer.html",
+          "hash": "049uMqDOyPYohZ10TLtNetruOqEAyvG9j25X/uVtxl4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.DbInitializers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.DbInitializers.html",
+          "hash": "f5UzTYKfwS604Y2zwUqVof9mMt58gC2mzzRRwZxx9tY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.Middleware.ExceptionHandlingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.Middleware.ExceptionHandlingService.html",
+          "hash": "q2Z7uzJVOoIHDf3k56i9gat+cCMaUddJM9BpV2PM9vY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.Middleware.IExceptionHandlingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.Middleware.IExceptionHandlingService.html",
+          "hash": "BM7eSHJLwdaMHsBCbrD1QipfR0463fuewqlfwyuAQlg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.Middleware.html",
+          "hash": "+Cf+iVagEjXcun66QbVp6W/shJ7nt+ZfUKur8haJbfU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.CategoryTaskSynchronizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.CategoryTaskSynchronizer.html",
+          "hash": "btKyZKCVJRF8ZMk8ZBq9TAUHMtlPRLwD3rhRPhCHH0s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.DataRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.DataRepository.html",
+          "hash": "cY5Q0xlX0tyIcFQAcWUMjYjj5lIsLRgelKxmSVMS3xk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.IObservableDbCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.IObservableDbCollection-1.html",
+          "hash": "NgHFgVqBnMsw5x7cEXgWURXk4ij4ygwVUFJK0o2KTiY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.html",
+          "hash": "hPSWK0CXg2iLasD8s6s0EHlwlmMvpmtimlHHwMTdfDM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html",
+          "hash": "qp0fqidAbXvNqG46WBmlkF3XCNR1NS8f5ncYJPP7WSc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.ObservableTaskDbCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.ObservableTaskDbCollection.html",
+          "hash": "Y10Y3cSuBWUvc171qZX4EwpHiOlOGoVMElkzIsg0kwo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ObservableDbCollections.html",
+          "hash": "npKuahsLcvkA/KgJGCs3LJSnR5yAEQeWXH2QH95RNnk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ValidationRules.EnumValidationRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ValidationRules.EnumValidationRule.html",
+          "hash": "rpqHaAP5pr2wTcfSNdDv4HEXMH+LHfHKVc85IW0KLts="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ValidationRules.NameValidationRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ValidationRules.NameValidationRule.html",
+          "hash": "pxaarCAkxvkU4zhXDc+/BEtwFDtY51E/vcsuNZ7ZZ2s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ValidationRules.NotNullValidationRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ValidationRules.NotNullValidationRule.html",
+          "hash": "lEOvNxZKIZVLhEhXCww6ZzmmOCGiMcuDJbMb0wsZ3dM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ValidationRules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ValidationRules.html",
+          "hash": "aN4eDwK2pWS1agQCQe5o251DQlW41+7ddJ6lLxGmFUQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ViewUpdaters.IViewUpdater-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ViewUpdaters.IViewUpdater-1.html",
+          "hash": "d0C1utzpuF6y6Pq7+fyiC7M+05mvMXvJFw3bxxT/8WM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ViewUpdaters.ViewUpdater-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ViewUpdaters.ViewUpdater-1.html",
+          "hash": "PbGb9Ese4xk3OH/zXfUnPML8AFTmuIrxNa98KclfzHw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.ViewUpdaters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.ViewUpdaters.html",
+          "hash": "uJul7ZI2DjZmH6FVL1tMOzDlokrYh0syyPGHJpKPqpw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.WPFExtension.ColorToHexConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.WPFExtension.ColorToHexConverter.html",
+          "hash": "qWZB/CF97sg7KrvPr2V8Uqk6uXW2tdFbcelAA5dvDug="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.WPFExtension.EnumCollectionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.WPFExtension.EnumCollectionExtension.html",
+          "hash": "ARTdfBHNYWoQZdhzjFefqpEt6oBHrGpFF73E2KI2J1Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.WPFExtension.ObservableCollectionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.WPFExtension.ObservableCollectionExtension.html",
+          "hash": "HnwFcSOt07wj68O8ZRnLrzlz14z9E827F/H2Tm+S8eM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Infrastructure.WPFExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Infrastructure.WPFExtension.html",
+          "hash": "KEO0pl267gvBnWn0O7XWlmX+bzVrnJ+2Ej8iUUqQtnU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.MainWindow.html",
+          "hash": "lvfwSr+HCWIOvJzB2mwvBeFv+Lnp5vbKS9Yphd8J4H4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Fallbacks.CategoryFallbackService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Fallbacks.CategoryFallbackService.html",
+          "hash": "FGiiS2/OXfVGJuIwTq0TIIKqI/IPRdfdkagBtgfPylc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Fallbacks.ICategoryFallbackService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Fallbacks.ICategoryFallbackService.html",
+          "hash": "Y0cV8O9ROOHnEsXy+tMVw6VctgezA3Xhg+/tRSggeYQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Fallbacks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Fallbacks.html",
+          "hash": "5j+2u+5uR2hQGwORzpm4hOAehLGx57FSTq0zn2gAp/c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Stores.CategoryStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Stores.CategoryStore.html",
+          "hash": "NOgLXmUAfumUF0Xf9+8X/LB0zsVrG+fl6ZK6MZ6i77g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Stores.DbStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Stores.DbStore-1.html",
+          "hash": "v07U2n/gMwEXa+h622BBpPLdp8m27n2orEa5GHB1QlM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Stores.IStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Stores.IStore-1.html",
+          "hash": "MPhNlKNwRNCYHu5mUMoT0Uv2W4ayUBdIvhb1n5tOiLA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Stores.IStoreAsync-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Stores.IStoreAsync-1.html",
+          "hash": "tPMA/FuI5BJY8NFyGcuJPVACW9C5U7LSdRuWcREd2XM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Stores.IStoreSync-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Stores.IStoreSync-1.html",
+          "hash": "X68I4T58oNacRWGhgEBupvbBf0Z9nm7uCF2L3FZSSS0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Stores.TaskStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Stores.TaskStore.html",
+          "hash": "D0cxg0AbbkBaflLGMno1NLI2YGyPRY+hS575ex6o//8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Services.Stores.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Services.Stores.html",
+          "hash": "jynPT4Z1nBklzRW7oogSNw29vB6J4pi1Px3pyv93u2Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.Base.ViewModelBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.Base.ViewModelBase.html",
+          "hash": "YrVuEKbIOxx7zoxtXvgIQw+KOyPl4S/VKiZ4LXdmj2M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.Base.html",
+          "hash": "ckK5oATlpJCpSH0je6g3nRg8A4v3SieiqCTvRkPW8Z8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.EditCategoryPageViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.EditCategoryPageViewModel.html",
+          "hash": "FBJVY37dNPPVBNeDzhz/mk5kaq5EeXG28VQXJmfZdx4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.EditTaskPageViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.EditTaskPageViewModel.html",
+          "hash": "nH+YirVVQjA7m1SW7DbgYvEKEY1T43SncGGSWGTIDJA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.MainPageViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.MainPageViewModel.html",
+          "hash": "7r66JUisuzhokXaSXyV7sgWT6EvwjzKzKJDT0AJs8FQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.MainWindowViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.MainWindowViewModel.html",
+          "hash": "xnaotLr99i65ei0BIkHqohjQzww7csu/VN8YXBxthdo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.ViewModelLocator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.ViewModelLocator.html",
+          "hash": "rqjsSL9G5pAUK+Z7wmNr1TzJI8LtmMp3+zMAxzNl1is="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.ViewModels.html",
+          "hash": "mIM2H87J9dBJZxcjG1VaclRzxRvoDwAMmYtuCBVKwzQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Views.EditCategoryPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Views.EditCategoryPage.html",
+          "hash": "wb+802qX9o9ETctMT1sXx+JLb25q7LbZa2sxhrVyrmE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Views.EditTaskPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Views.EditTaskPage.html",
+          "hash": "uvW9paFZaKAkgScYibs4FZqes0y2pR9BJzU9BudkqGc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Views.MainPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Views.MainPage.html",
+          "hash": "AR6QXrJL8W/wdSDfKlRWIfC2kL66ta0lU8TU4XEv5lU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.Views.html",
+          "hash": "nFs3Q8N2Fkl4mnlZS6U74er7b7liCF12SY4I6im8msk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CasualTasker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CasualTasker.html",
+          "hash": "vww9D2Z8PP6gzHiW33MgHyJVtPFRsDtZFFJt3ykH8p0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "5SkWDH/iWzqnoHz5JhX4BcIKFEZ6sEtPtNIruwRKyBc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "PYxBcORBK16SUSEgSziUSf4Fy0Dcd3MpAVtdxewdhB4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "sHgxMzIvP+eWJUTcx0mvdQ9nWwJuw7U4BLPK0F96j4w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "wH//6y83JEkYIH5NcOw7ufD8x7B3tAtDxKuRfwrAfx4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 2
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 64,
+          "skipped_file_count": 64
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

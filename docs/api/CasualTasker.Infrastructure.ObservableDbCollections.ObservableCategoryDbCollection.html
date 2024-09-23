@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ObservableCategoryDbCollection
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ObservableCategoryDbCollection
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection">
+  
+  
+  <h1 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection" class="text-break">Class ObservableCategoryDbCollection
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a collection of category entities that synchronizes the database with the view.
+Extends <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html">ObservableDbCollection&lt;TEntity&gt;</a> to provide specific logic for categories,
+including handling fallback categories and firing events when categories are updated or deleted.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html">ObservableDbCollection</a>&lt;<a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a>&gt;</div>
+    <div class="level2"><span class="xref">ObservableCategoryDbCollection</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.IObservableDbCollection-1.html">IObservableDbCollection</a>&lt;<a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1__logger">ObservableDbCollection&lt;CategoryDTO&gt;._logger</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_ViewEntities">ObservableDbCollection&lt;CategoryDTO&gt;.ViewEntities</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_Entities">ObservableDbCollection&lt;CategoryDTO&gt;.Entities</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_First">ObservableDbCollection&lt;CategoryDTO&gt;.First</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_Add__0_">ObservableDbCollection&lt;CategoryDTO&gt;.Add(CategoryDTO)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_EntityExists__0_">ObservableDbCollection&lt;CategoryDTO&gt;.EntityExists(CategoryDTO)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_Get_System_Int32_">ObservableDbCollection&lt;CategoryDTO&gt;.Get(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_Get__0_">ObservableDbCollection&lt;CategoryDTO&gt;.Get(CategoryDTO)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_BatchUpdate_IEnumerable__0__">ObservableDbCollection&lt;CategoryDTO&gt;.BatchUpdate(IEnumerable&lt;CategoryDTO&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_1_UpdateFromDB">ObservableDbCollection&lt;CategoryDTO&gt;.UpdateFromDB()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.html">CasualTasker.Infrastructure.ObservableDbCollections</a></h6>
+  <h6><strong>Assembly</strong>: CasualTasker.dll</h6>
+  <h5 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ObservableCategoryDbCollection : ObservableDbCollection&lt;CategoryDTO&gt;, IObservableDbCollection&lt;CategoryDTO&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection__ctor_CasualTasker_Services_Stores_IStore_CasualTasker_DTO_CategoryDTO__Microsoft_Extensions_Logging_ILogger_CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_CasualTasker_DTO_CategoryDTO___CasualTasker_Services_Fallbacks_ICategoryFallbackService_.md&amp;value=---%0Auid%3A%20CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.%23ctor(CasualTasker.Services.Stores.IStore%7BCasualTasker.DTO.CategoryDTO%7D%2CMicrosoft.Extensions.Logging.ILogger%7BCasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection%7BCasualTasker.DTO.CategoryDTO%7D%7D%2CCasualTasker.Services.Fallbacks.ICategoryFallbackService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/Infrastructure/ObservableDbCollections/ObservableCategoryDbCollection.cs/#L23">View Source</a>
+  </span>
+  <a id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection__ctor_" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.#ctor*"></a>
+  <h4 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection__ctor_CasualTasker_Services_Stores_IStore_CasualTasker_DTO_CategoryDTO__Microsoft_Extensions_Logging_ILogger_CasualTasker_Infrastructure_ObservableDbCollections_ObservableDbCollection_CasualTasker_DTO_CategoryDTO___CasualTasker_Services_Fallbacks_ICategoryFallbackService_" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.#ctor(CasualTasker.Services.Stores.IStore{CasualTasker.DTO.CategoryDTO},Microsoft.Extensions.Logging.ILogger{CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection{CasualTasker.DTO.CategoryDTO}},CasualTasker.Services.Fallbacks.ICategoryFallbackService)">ObservableCategoryDbCollection(IStore&lt;CategoryDTO&gt;, ILogger&lt;ObservableDbCollection&lt;CategoryDTO&gt;&gt;, ICategoryFallbackService)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.html">ObservableCategoryDbCollection</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCategoryDbCollection(IStore&lt;CategoryDTO&gt; store, ILogger&lt;ObservableDbCollection&lt;CategoryDTO&gt;&gt; logger, ICategoryFallbackService categoryFallbackService)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.Services.Stores.IStore-1.html">IStore</a>&lt;<a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a>&gt;</td>
+        <td><span class="parametername">store</span></td>
+        <td><p>The store that handles category-related operations with the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection-1.html">ObservableDbCollection</a>&lt;<a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a>&gt;&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger used to log operations within the category collection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CasualTasker.Services.Fallbacks.ICategoryFallbackService.html">ICategoryFallbackService</a></td>
+        <td><span class="parametername">categoryFallbackService</span></td>
+        <td><p>Service responsible for managing fallback categories.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_DefaultDeletedEntity.md&amp;value=---%0Auid%3A%20CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.DefaultDeletedEntity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/Infrastructure/ObservableDbCollections/ObservableCategoryDbCollection.cs/#L44">View Source</a>
+  </span>
+  <a id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_DefaultDeletedEntity_" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.DefaultDeletedEntity*"></a>
+  <h4 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_DefaultDeletedEntity" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.DefaultDeletedEntity">DefaultDeletedEntity</h4>
+  <div class="markdown level1 summary"><p>Gets the default category used for tasks when a category is deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override CategoryDTO DefaultDeletedEntity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection&lt;CasualTasker.DTO.CategoryDTO&gt;.DefaultDeletedEntity</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_Delete_CasualTasker_DTO_CategoryDTO_.md&amp;value=---%0Auid%3A%20CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.Delete(CasualTasker.DTO.CategoryDTO)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/Infrastructure/ObservableDbCollections/ObservableCategoryDbCollection.cs/#L53">View Source</a>
+  </span>
+  <a id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_Delete_" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.Delete*"></a>
+  <h4 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_Delete_CasualTasker_DTO_CategoryDTO_" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.Delete(CasualTasker.DTO.CategoryDTO)">Delete(CategoryDTO)</h4>
+  <div class="markdown level1 summary"><p>Deletes the specified category from the collection and the database.
+Triggers the <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_OnCategoryDeleted">OnCategoryDeleted</a> event upon successful deletion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Delete(CategoryDTO entity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a></td>
+        <td><span class="parametername">entity</span></td>
+        <td><p>The category to delete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the category was deleted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection&lt;CasualTasker.DTO.CategoryDTO&gt;.Delete(CasualTasker.DTO.CategoryDTO)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_Update_CasualTasker_DTO_CategoryDTO_System_Boolean_.md&amp;value=---%0Auid%3A%20CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.Update(CasualTasker.DTO.CategoryDTO%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/Infrastructure/ObservableDbCollections/ObservableCategoryDbCollection.cs/#L82">View Source</a>
+  </span>
+  <a id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_Update_" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.Update*"></a>
+  <h4 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_Update_CasualTasker_DTO_CategoryDTO_System_Boolean_" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.Update(CasualTasker.DTO.CategoryDTO,System.Boolean)">Update(CategoryDTO, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Updates the specified category in the collection and the database.
+Triggers the <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.html#CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_OnCategoryUpdated">OnCategoryUpdated</a> event upon successful update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Update(CategoryDTO entity, bool isDBUpdated = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a></td>
+        <td><span class="parametername">entity</span></td>
+        <td><p>The category to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isDBUpdated</span></td>
+        <td><p>Indicates whether the database should be updated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the update was successful; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CasualTasker.Infrastructure.ObservableDbCollections.ObservableDbCollection&lt;CasualTasker.DTO.CategoryDTO&gt;.Update(CasualTasker.DTO.CategoryDTO, System.Boolean)</span></div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_OnCategoryDeleted.md&amp;value=---%0Auid%3A%20CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.OnCategoryDeleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/Infrastructure/ObservableDbCollections/ObservableCategoryDbCollection.cs/#L39">View Source</a>
+  </span>
+  <h4 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_OnCategoryDeleted" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.OnCategoryDeleted">OnCategoryDeleted</h4>
+  <div class="markdown level1 summary"><p>Event triggered when a category is deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;CategoryDTO&gt; OnCategoryDeleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_OnCategoryUpdated.md&amp;value=---%0Auid%3A%20CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.OnCategoryUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/Infrastructure/ObservableDbCollections/ObservableCategoryDbCollection.cs/#L34">View Source</a>
+  </span>
+  <h4 id="CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection_OnCategoryUpdated" data-uid="CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection.OnCategoryUpdated">OnCategoryUpdated</h4>
+  <div class="markdown level1 summary"><p>Event triggered when a category is updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;CategoryDTO&gt; OnCategoryUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="CasualTasker.DTO.CategoryDTO.html">CategoryDTO</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="CasualTasker.Infrastructure.ObservableDbCollections.IObservableDbCollection-1.html">IObservableDbCollection&lt;TEntity&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/German322VDK/CasualTasker/new/Documentation/apiSpec/new?filename=CasualTasker_Infrastructure_ObservableDbCollections_ObservableCategoryDbCollection.md&amp;value=---%0Auid%3A%20CasualTasker.Infrastructure.ObservableDbCollections.ObservableCategoryDbCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/German322VDK/CasualTasker/blob/Documentation/CasualTasker/Infrastructure/ObservableDbCollections/ObservableCategoryDbCollection.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
